@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: staging
+    database: primordial-gate-415119
+     # For postgres:
+      #database: production
+    schema: nyc_restaurant_data
+
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: inspection_data
+
+
+models:
+    - name: stg_restaurant_inspections
