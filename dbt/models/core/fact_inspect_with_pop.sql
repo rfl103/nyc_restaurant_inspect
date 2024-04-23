@@ -1,3 +1,4 @@
+--Joined inspection_data column with boro population data
 {{
     config(
         materialized='table'
@@ -13,7 +14,7 @@ dim_pop_boro as (
 )
 select 
         --Removed some columns that will not be needed for further analysis.
-        inspection_data.inspection_id,
+        inspection_data.violation_id,
         inspection_data.camis_id,
         inspection_data.dba,
         inspection_data.boro,

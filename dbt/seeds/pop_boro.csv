@@ -1,5 +1,4 @@
 Year,GeoType,Borough,Name,Pop1,PopAcre,LandAcres
-2020,NYC2020,New York City,NYC,"8,804,190",45.8,"192,289"
 2020,Boro2020,Manhattan,Manhattan,"1,694,251",116.8,"14,500"
 2020,Boro2020,Bronx,Bronx,"1,472,654",54.6,"26,990"
 2020,Boro2020,Brooklyn,Brooklyn,"2,736,074",61.6,"44,401"

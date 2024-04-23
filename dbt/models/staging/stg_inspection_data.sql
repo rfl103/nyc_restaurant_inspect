@@ -12,7 +12,7 @@ source as (
 renamed as (
 
     select
-        {{ dbt_utils.generate_surrogate_key(['camis', 'inspection_date']) }} as inspection_id,
+        {{ dbt_utils.generate_surrogate_key(['camis', 'inspection_date', 'violation_code']) }} as violation_id,
         cast(camis as integer) as camis_id,
         cast(dba as string) as dba,
         cast(boro as string) as boro,

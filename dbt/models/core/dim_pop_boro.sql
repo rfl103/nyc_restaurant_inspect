@@ -1,3 +1,5 @@
+--Loading in the seed file with the population data
+
 {{ config(materialized='table') }}
 
 select 
