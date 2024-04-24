@@ -49,8 +49,8 @@ renamed as (
 select * from renamed
 
 -- allows test run with limit of 100 using syntax below
--- dbt build --select <model_name> --vars '{'is_test_run': 'false'}'
-{% if var('is_test_run', default=true) %}
+-- dbt build --select <model_name> --vars '{'is_test_run': 'true'}'
+{% if var('is_test_run', default=false) %}
 
   limit 100
 
