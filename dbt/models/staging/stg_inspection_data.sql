@@ -3,7 +3,7 @@ with
 source as (
     --checks for data with null camis id and for duplicated data 
     select * ,
-    row_number() over(partition by camis, inspection_date) as rn
+    row_number() over(partition by camis, inspection_date, violation_code) as rn
     from {{ source('staging', 'inspection_data') }}
     where camis is not null
 
