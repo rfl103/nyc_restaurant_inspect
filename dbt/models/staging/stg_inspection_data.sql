@@ -21,7 +21,7 @@ renamed as (
         cast(zipcode as string) as zipcode,
         cast(phone as string) as phone,
         cast(cuisine_description as string) as cuisine,
-        cast(inspection_date as timestamp) as insepction_date,
+        cast(inspection_date as timestamp) as inspection_date,
         {{ get_inspection_performed("inspection_date") }} as inspection_performed,
         cast(action as string) as action_taken,
         cast(violation_code as string) as violation_code,
