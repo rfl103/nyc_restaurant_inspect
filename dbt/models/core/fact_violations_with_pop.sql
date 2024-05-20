@@ -22,7 +22,7 @@ select
         CONCAT(inspection_data.camis_id, inspection_data.inspection_date) as inspection_id,
         inspection_data.inspection_performed,
         coalesce(inspection_data.action_taken, 'Unknown') as action_taken,
-        coalesce(inspection_data.violation_code, 'Unknown') as violation_code,
+        inspection_data.violation_code,
         coalesce(inspection_data.violation_description, 'Unknown') as violation_description,
         coalesce(inspection_data.critical_flag, 'Unknown') as critical_flag,
         inspection_data.score,
