@@ -21,7 +21,7 @@ select
         coalesce(inspection_data.cuisine, 'Unknown') as cuisine,
         inspection_data.inspection_date,
         inspection_data.inspection_performed,
-        coalesce(inspection_data.action_taken, 'Unknown') as action_taken,
+        coalesce(inspection_data.action_taken, 'No action') as action_taken,
         inspection_data.score,
         coalesce(inspection_data.grade, 'Unknown') as grade,
         coalesce(inspection_data.inspection_type, 'Unknown') as inspection_type,
