@@ -21,9 +21,11 @@ The main objective of this project was to create a data pipeline, use the pipeli
 and finally, build a dashboard to visualize the data. 
 
 Some questions that I would like to answer include:
+*How many inspections and violations have been recorded?
 *What are the most common violations?
-*Do certain boros have more violations than one would expect based on population?
-
+*Do certain boros have more violations than one would expect based on population (violations per capita?
+*What percentage of inspections result in a violation?
+*What is the average inspection score by borough?
 
 ##Infrastructure
 Technologies used to create this project include:
@@ -35,12 +37,15 @@ Technologies used to create this project include:
 *dbt (data transformation)
 *Looker (data visualization)
 
+##Architecture Diagram
+
 ##Dashboard
 
 ##Ideas for Improvement
 
 Some ideas that I have for improving this project include:
-*The code could be scheduled to run and refresh more frequently. 
+*The code could be scheduled to run and refresh more frequently as data is added daily. 
+*The tables/code in the data warehouse could be optimized to be structured more effeciently. 
 
 ##How to Reproduce This Project
 
@@ -55,24 +60,41 @@ Please note that these instructions are based on use of a MacOS. There may be so
 ###Project set up
 
 1. Clone this repository
-2. Enter the directory that contains the project. 
-3. Setup a new GCP Project
+2. Setup a new GCP Project
 
 ####Terraform
 
-4. Edit terraform variables.tf file
-5. Prepare working directory with terraform init
-6. Check execution plan
-7. Create the infrastructure
+3. Edit terraform variables.tf file. You will need to change the default variables for project, region, and BQ_DATASET
+4. Prepare working directory with terraform init
+
+'''
+terraform init
+'''
+
+5. Check execution plan to confirm changes
+
+'''
+terraform plan
+'''
+
+6. Create the infrastructure
+
+'''
+terraform init
+'''
 
 ####Mage
 
-8. Rename dev.env to .env
-9. Edit the .env file to reflect the same Project ID and bucket name that you have configured for Terraform.
-10. Build the Mage docker container
-11. Start the docker container. 
-12. Access the web interface
-13. Execute pipeline.  After Mage runs, you should see new datasets that have been created within BigQuery.
+7. Rename dev.env to .env
+8. Edit the .env file to reflect the same Project ID and bucket name that you have configured for Terraform. 
+9. Build the Mage docker container
+10. Start the docker container. 
+11. Access the web interface
+12. Execute pipeline.  After Mage runs, you should see new datasets that have been created within BigQuery.
+
+###Looker
+
+13.  You should then be able to connect the BigQuery dataset created to Looker Studio and began creating your dashboard. 
 
 
 
