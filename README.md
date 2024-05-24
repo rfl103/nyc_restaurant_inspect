@@ -51,7 +51,7 @@ Please note that these instructions are based on use of a MacOS. There may be so
 
 ### Architecture Diagram
 
-[arch_diagram.drawio](images%2Farch_diagram.drawio)
+![rest_insp_arch_diagram.jpg](images%2Frest_insp_arch_diagram.jpg)
 
 ### Project set up
 
@@ -123,6 +123,7 @@ terraform apply
 12. Run the api_to_gcs and gcs_to_bigquery pipelines.  After Mage runs, you should see new datasets that have been stored within BigQuery.
 
 #### DBT
+
 13. Install dbt packages using the command:
 
 ```
